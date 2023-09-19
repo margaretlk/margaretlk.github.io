@@ -1,0 +1,15 @@
+html {
+    font-size: 50px;
+}
+
+p {
+    color: darkred;
+}
+
+.test-class {
+    color: blueviolet;
+}
+
+#testid {
+    color: rgba(24, 63, 203, 0.599);
+}
