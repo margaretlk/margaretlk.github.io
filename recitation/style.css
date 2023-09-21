@@ -60,6 +60,7 @@ body {
 /* General styles for the second business card*/
   
  .card2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     width: 35em;
     height: 22em;
     margin: 5em auto;
