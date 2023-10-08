@@ -1,0 +1,63 @@
+
+   html { 
+    background: url('psycho-hotel.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .contain1 {
+    position : fixed;
+    height : 10%;
+    width : 99%;
+    background-color : #e90808;
+    text-align: center;
+  }
+
+  .contain2 {
+    position : fixed;
+    top: 100px;
+    right: 50px;
+    height: 70%;
+    width: 40%;
+    background-color: #ed3737;
+    opacity: 70%;
+    place-items: center;
+  }
+  .title {
+    position : fixed;
+    top: 100px;
+    left: 50px;
+    height: 100%;
+    width: 20%;
+    background-color: black;
+    color: aliceblue;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+  }
+
+  h3 {
+    text-align: center;
+    color-scheme: white;
+  }
+
+    .movement {
+        flex: 1;
+        margin-right: 10px;
+        padding: 1%;
+        display: block;
+        float: left;
+    }
+
+    .star {
+        width: 50px;
+        height: 50px;
+    }
