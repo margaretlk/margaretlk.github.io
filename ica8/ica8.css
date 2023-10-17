@@ -19,9 +19,10 @@ body{
 
 .box2move {
     animation-duration: 2s;
-    animation-name: slidein;
+    animation-name: box2move;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-delay: 1s;
 }
 
 @keyframes box2move {
