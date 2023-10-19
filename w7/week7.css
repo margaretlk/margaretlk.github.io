@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: rgb(223, 224, 141);
 }
 nav{
     height: 50vh;
@@ -10,27 +10,55 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     height:20px;
-    background-color: blueviolet;
+    background-color: rgb(245, 155, 81);
 }
 nav a{
     width:10vw;
     text-align: center;
     text-decoration: none;
     color:black;
+    font-family:'Courier', Courier, monospace
+}
+
+nav a:hover {
+    color: deeppink;
 }
 
 
 img{
-    width:30vw;
-    height: 30vh;
+    width: 50%;
+    height: 80%;
 }
 
 #red-ball{
-    background-color: crimson;
+    background-color: rgb(253, 104, 231);
     width: 20px;
     height:20px;
     border-radius: 50%;
     position: absolute;
     left:5vw;
     top:0;
+}
+
+h1 {
+    font-family:'Courier New', Courier, monospace;
+}
+
+.ballmove {
+    animation-duration: 2s;
+    animation-name: ballmove;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+}
+
+@keyframes ballmove{
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+    to {
+        margin-left: 0%;
+    }
+
 }
