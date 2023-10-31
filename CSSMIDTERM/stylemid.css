@@ -9,7 +9,8 @@ img {
     position: relative;
     height: 200px;
     width: 230px;
-}
+    padding-left: 560px;
+}  
 }
 
 @media screen and (min-width: 400px) {
@@ -189,3 +190,9 @@ nav {
               width: 70%;
             }
           }
+
+p {
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 2px dotted
+}
