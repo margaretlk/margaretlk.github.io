@@ -194,5 +194,6 @@ nav {
 p {
     padding-left: 50px;
     padding-right: 50px;
-    border: 2px dotted
+    border: 2px dotted black;
+    border
 }
