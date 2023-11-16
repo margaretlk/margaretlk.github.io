@@ -1,50 +1,46 @@
-const newbtn = document.querySelector('#js-new-quote');
-addEventListener('click', getQuote);
-//get this element & look for a click on it
-const ansbtn = document.querySelector('#js-tweet');
-addEventListener('click', getAns);
+const newBtn = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
+const answerBtn = document.querySelector('#js-tweet').addEventListener('click', displayAnswer);
 
-let answer = "";
+const questionTxt = document.querySelector('#js-quote-text');
+let answerTxt = document.querySelector('#js-answer-text');
 
-const endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion"
+let answer = '';
 
-//async - runs in parallel to the other js 
+// this is the endpoint for the API that we want to get a reponse from
+const endpoint = 'https://api.quotable.io/random';
+
 async function getQuote() {
-    //console.log('Test');
-
+   // try -> tries something; if it returns an error, it puts us into the catch block
     try {
         const response = await fetch(endpoint);
-        //wait for the results of fetch on endpoint variable 
-        if (!response.ok) { //if the response u get out of endpoint isnt ok - catch it. '!' checks for not ok
-            throw Error(response.statusText); //throw an error to get picked up - console will do the rest
+        // if !response.ok is "if the response ISN'T okay (status code 200)"
+        if (!response.ok) {
+            throw Error(response.statusText);
         }
         const json = await response.json();
-        displayQuote(json['question']);
+        
+        // JSON is a dictionary, which is like a list; we call specific pieces of information out based on the 'key' associated with that value
+        displayQuote(json['response']);
         answer = json['answer'];
-        //console.log(json); //json makes this readable for humans 
+        answerTxt.textContent = '';
     }
-    //try and fetch something off of api endpoint & if goes wrong - gives us the error back 
-    //send alert to user that didnt work
-        catch(err) {
-            console.log(err)
-            alert('Failed to fetch new quote')
-        }
+    catch(err) {
+        console.log(err);
+        alert('Failed to fetch new quote');
     }
+}
 
-    function displayQuote(question) {
-        const questionTxt = document.querySelector('#js-quote-text'); //defined variable that looks for empty blank space where we put text
-        //takes response from api - shoves text into this function 
-        questionTxt.textContent = question;
+// this function shows the question
+function displayQuote(quote) {
+    questionTxt.textContent = quote;
+}
 
-    }
+// this function shows the answer
+function displayAnswer() {
+    answerTxt.textContent = answer;
+}
 
-    function displayAns(answer) {
-        const answerTxt = document.querySelector('#js-answer-text'); //defined variable that looks for empty blank space where we put text
-        //takes response from api - shoves text into this function 
-        answerTxt.textContent = answer;
-
-    }
-
-    getQuote();
-    //run function once when page load
+// we run getQuote once when the script first loads to populate a question
+// when the page is loading
+getQuote();
 
