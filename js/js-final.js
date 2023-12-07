@@ -1,75 +1,22 @@
-const screens = document.querySelectorAll(".screen");
-const choosenumbers = document.querySelectorAll(".enter-numbs");
-const startButton = document.getElementById("start-btn");
-const gameContainer = document.getElementById("game-container");
-const timeElement = document.getElementById("time");
-const scoreElement = document.getElementById("score");
-const message = document.getElementById("message");
-let seconds = 0;
-let score = 0;
-let selectedInsect = {};
+const button = document.getElementById("runaway-btn");
 
-startButton.addEventListener("click", () => screens[0].classList.add("up"));
+const animateMove = (element, prop, pixels) =>
+  anime({
+    targets: element,
+    [prop]: `${pixels}px`,
+    easing: "easeOutCirc"
+  });
 
-const increaseScore = () => {
-  score++;
-  if (score > 19) message.classList.add("visible");
-  scoreElement.innerHTML = `Score: ${score}`;
-};
+["mouseover", "click"].forEach(function (el) {
+  button.addEventListener(el, function (event) {
+    const top = getRandomNumber(window.innerHeight - this.offsetHeight);
+    const left = getRandomNumber(window.innerWidth - this.offsetWidth);
 
-const addInsects = () => {
-  setTimeout(createInsect, 1000);
-  setTimeout(createInsect, 1500);
-};
-
-const catchInsect = function () {
-  increaseScore();
-  this.classList.add("caught");
-  setTimeout(() => this.remove, 2000);
-  addInsects();
-};
-
-const getRandomLocation = () => {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  const x = Math.random() * (width - 200) + 100;
-  const y = Math.random() * (height - 200) + 100;
-  return { x, y };
-};
-
-const createInsect = () => {
-  const insect = document.createElement("div");
-  insect.classList.add("insect");
-  const { x, y } = getRandomLocation();
-  insect.style.top = `${y}px`;
-  insect.style.left = `${x}px`;
-  insect.innerHTML = `<img src="${selectedInsect.src}" 
-  alt="${selectedInsect.alt}" 
-  style="transform: rotate(${Math.random() * 360}deg)" />`;
-  insect.addEventListener("click", catchInsect);
-  gameContainer.appendChild(insect);
-};
-
-const increaseTime = () => {
-  let m = Math.floor(seconds / 60);
-  let s = seconds % 60;
-  m = m < 10 ? `0${m}` : m;
-  s = s < 10 ? `0${s}` : s;
-  timeElement.innerHTML = `Time: ${m}:${s}`;
-  seconds++;
-};
-
-const startGame = () => setInterval(increaseTime, 1000);
-
-chooseInsectButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const image = button.querySelector("img");
-    const src = image.getAttribute("src");
-    const alt = image.getAttribute("alt");
-    selectedInsect = { src, alt };
-    screens[1].classList.add("up");
-    setTimeout(createInsect, 1000);
-    startGame();
+    animateMove(this, "left", left).play();
+    animateMove(this, "top", top).play();
   });
 });
 
+const getRandomNumber = (num) => {
+  return Math.floor(Math.random() * (num + 1));
+};
