@@ -1,26 +1,52 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  user-select: none;
+/*https://coolors.co/d0efb1-b3d89c-9dc3c2-77a6b6-4d7298 pallette from*/
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
 }
 
+/*mouse effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/*depends on website used*/
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* overide default */
+  appearance: none;
+  width: 25px; /* change width */
+  height: 25px; /* height */
+  background: rgb(77, 114, 152); /* UCLA blue */
+  cursor: pointer; /* use a cursor */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* handles the width */
+  height: 25px; /* handles height */
+  background: rgb(77, 114, 152); /* UCLA blue */
+  cursor: pointer; /* cursor */
+}
 body {
-  background: #ffffff;
+  background-color: rgb(157, 195, 194); /*light bluee*/
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'georgia';
 }
 
 button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 4rem;
-  width: 10rem;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 1px 1px 5px black;
-  color: #fff;
-  background: #000;
-  cursor: pointer;
+  font-size: 18px;
+  font-family: 'georgia';
 }
