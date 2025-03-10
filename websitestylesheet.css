@@ -1,5 +1,5 @@
 body {
-    background-color: #FFFAF0; /* Light orange background */
+    background-color: #FFFAF0; /* Light eggshell background */
     color: #262626; /* text color */
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,15 +7,11 @@ body {
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'magfont';
-    src: url('Library/Fonts/magfont') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
-.title {
-    padding: 20px 30px; /* Top & bottom: 20px, Left & right: 30px */
+.header-image {
+    width: 75%;       /* Make the image take up the full width of its container */
+    height: 300px;     /* Set a fixed height */
+    object-fit: contain; /* Ensures the image covers the area without distortion */
 }
 
 header {
@@ -29,13 +25,14 @@ header {
 }
 
 nav {
-    background-color: #D00000; /* engineering red for menu background color */
+ /* engineering red for menu background color */
     padding: 10px 0;
     text-align: center;
 }
 
 nav a {
-    color: #FFFAF0; /* White links */
+    color: #D00000; /* White links */ 
+    text-shadow: 5px 10px;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -54,7 +51,7 @@ section {
 .card {
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);*/
     margin-bottom: 20px;
 }
 
