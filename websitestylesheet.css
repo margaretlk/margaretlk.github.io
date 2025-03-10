@@ -14,10 +14,13 @@ body {
     font-style: normal;
 }
 
+.title {
+    padding: 20px 30px; /* Top & bottom: 20px, Left & right: 30px */
+}
 
 header {
-    font-family: 'magfont', sans-serif;
-    padding: 20px;
+    font-family: Helvetica, sans-serif;
+    padding: 50px;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
