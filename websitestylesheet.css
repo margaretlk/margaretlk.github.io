@@ -1,22 +1,32 @@
 body {
     background-color: #FFFAF0; /* Light orange background */
-    color: #FF8C00; /* Deep orange text for contrast */
+    color: #262626; /* text color */
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 10;
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'magfont';
+    src: url('fonts/magfont') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 header {
-    background-color: #FFDAB9; /* Soft peach for header */
+    font-family: 'magfont', sans-serif;
     padding: 20px;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav {
-    background-color: #FFA07A; /* Light salmon for navigation bar */
+    background-color: #D00000; /* engineering red for menu background color */
     padding: 10px 0;
     text-align: center;
 }
@@ -30,7 +40,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #FF8C00; /* Deep orange hover effect */
+    color: #FFBA08; /* yellow hover effect */
 }
 
 section {
@@ -39,8 +49,6 @@ section {
 }
 
 .card {
-    background-color: #FFDAB9; /* Card with peach color */
-    border: 2px solid #FFA07A; /* Light salmon border */
     border-radius: 12px;
     padding: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
@@ -48,7 +56,7 @@ section {
 }
 
 footer {
-    background-color: #FFA07A;
+    background-color: #3F88C5;
     color: #FFFAF0;
     text-align: center;
     padding: 15px 0;
