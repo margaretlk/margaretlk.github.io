@@ -9,7 +9,7 @@ body {
 
 @font-face {
     font-family: 'magfont';
-    src: url('fonts/magfont') format('truetype');
+    src: url('Library/Fonts/magfont') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
