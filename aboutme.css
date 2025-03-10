@@ -1,0 +1,67 @@
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px; /* Image galleries on both sides */
+    background-color: #fffaf0; /* Light orange background */
+    color: #333; /* Dark text for contrast */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content {
+    padding: 2rem;
+}
+
+.portfolio {
+    background-color: #ffcc99; /* Soft orange for the portfolio section */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow on the left side */
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border: 2px solid #ff9f43; /* Slightly deeper orange for accents */
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: #000;
+}
+
+.image-gallery img {
+    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.about-me {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.about-me h2 {
+    color: #ff9f43;
+    margin-bottom: 1rem;
+}
+
+.about-me p {
+    line-height: 1.6;
+    color: #555;
+}
