@@ -1,0 +1,28 @@
+/* Grid Container */
+.pdf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* PDF Item Styling */
+.pdf-item {
+    width: 100%;
+    height: 90vh;
+    border: 2px solid  #D00000;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+.pdf-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+
+.pdf-item a:hover {
+    background-color: #FFBA08;
+}

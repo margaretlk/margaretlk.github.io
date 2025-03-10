@@ -142,6 +142,11 @@ a:hover {color: #D00000;  }
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.graphicpos { 
+    width: 20%;   
+    padding: 10px;    /* Make the image take up the full width of its container */    /* Set a fixed height */
+}
+
 .abtme-image {
     float: left;
     width: 30%; /* Adjust width for a reasonable size */
