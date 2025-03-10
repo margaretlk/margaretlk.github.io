@@ -20,6 +20,7 @@ body {
 }
 
 header {
+    color: #3F88C5;
     font-family: Helvetica, sans-serif;
     padding: 50px;
     text-align: center;
@@ -59,6 +60,11 @@ section {
     /*box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);*/
     margin-bottom: 20px;
 }
+
+h2 {
+    padding: 20px;
+}
+
 
 p {
     font-size: 16px;  /* Moderate font size for readability */
@@ -116,3 +122,23 @@ a:hover {color: #D00000;  }
 .fade-in:nth-child(3) {
     animation-delay: 0.6s;
 }
+
+.main-content {
+    padding: 2rem;
+}
+
+.portfolio {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow on the left side */
+}
+
+.portfolio-item {
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
