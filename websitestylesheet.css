@@ -1,0 +1,56 @@
+body {
+    background-color: #FFFAF0; /* Light orange background */
+    color: #FF8C00; /* Deep orange text for contrast */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #FFDAB9; /* Soft peach for header */
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #FFA07A; /* Light salmon for navigation bar */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #FFFAF0; /* White links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FF8C00; /* Deep orange hover effect */
+}
+
+section {
+    padding: 40px;
+    background-color: #FFFAF0; /* Background to match body */
+}
+
+.card {
+    background-color: #FFDAB9; /* Card with peach color */
+    border: 2px solid #FFA07A; /* Light salmon border */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #FFA07A;
+    color: #FFFAF0;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
