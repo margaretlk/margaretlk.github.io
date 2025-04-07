@@ -192,3 +192,46 @@ a:hover {color: #D00000;  }
       max-width: 100%;
     }
   }
+
+
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tooltip-container img {
+    display: block;
+    width: 200px; /* adjust as needed */
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Fade image on hover */
+  .tooltip-container:hover img {
+    opacity: 0.4;
+  }
+  
+  .tooltip-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    white-space: nowrap;
+    
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* ensures it doesn't block the image */
+  }
+  
+  /* Show tooltip on hover */
+  .tooltip-container:hover .tooltip-text {
+    opacity: 1;
+  }
+  
