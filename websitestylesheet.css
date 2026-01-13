@@ -1,49 +1,70 @@
 body {
-    background-color: #FFFAF0; /* Light eggshell background */
     color: #262626; /* text color */
     font-family: 'Arial', sans-serif;
+    background-color: #fcf7ff;
     margin: 0;
-    padding: 20;
+    padding: 60px 20px;
     box-sizing: border-box;
-}
-
-body {
-    opacity: 0;
+    line-height: 1.6;
     animation: fadeIn 1s ease-out forwards;
 }
 
+/*
+.gradient-background {
+  background: linear-gradient(300deg,#fcf7ff,#bbd1f5);
+  background-size: 120% 120%;
+  animation: gradient-animation 12s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  */
+
 
 .header-image {
-    width: 75%;       /* Make the image take up the full width of its container */
+    width:45%;       /* Make the image take up the full width of its container */
     height: 300px;     /* Set a fixed height */
     object-fit: contain; /* Ensures the image covers the area without distortion */
 }
 
 header {
-    color: #3F88C5;
-    font-family: Helvetica, sans-serif;
     padding: 50px;
     text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 18px;
+}
+
+h1 {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
 }
 
 nav {
- /* engineering red for menu background color */
     padding: 10px 0;
     text-align: center;
-}
+    font-size: 20px;
+        }
+
 
 nav a {
-    color: #D00000; /* White links */ 
+    color: #1a1a1a;
     text-shadow: 5px 10px;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: opacity 0.2s;
 }
+
 
 nav a:hover {
     color: #FFBA08; /* yellow hover effect */
@@ -51,14 +72,7 @@ nav a:hover {
 
 section {
     padding: 20px;
-    background-color: #FFFAF0; /* Background to match body */
-}
-
-.card {
-    border-radius: 12px;
-    padding: 20px;
-    /*box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);*/
-    margin-bottom: 20px;
+    background-color: #ECE5F0; /* Background to match body */
 }
 
 h2 {
@@ -70,18 +84,36 @@ p {
     font-size: 16px;  /* Moderate font size for readability */
     line-height: 1.6;  /* Space between lines for easy reading */
     margin-bottom: 1.5em;  /* Space between paragraphs */
-    text-align: justify;  /* Evenly spaced text for a neat look */
+    text-align: left;  /* Evenly spaced text for a neat look */
     word-wrap: break-word;  /* Prevents overflow */
 }
 
 
-footer {
-    background-color: 3F88C5;
-    color: #FFFAF0;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.9rem;
-}
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .links-grid a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 15px;
+            transition: opacity 0.2s;
+            display: block;
+        }
+
+        .links-grid a:hover {
+            opacity: 0.5;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 12px;
+            color: #666;
+        }
 
 .linkstyle {
     /* Base link style */
@@ -149,7 +181,7 @@ a:hover {color: #D00000;  }
 
 .abtme-image {
     float: left;
-    width: 30%; /* Adjust width for a reasonable size */
+    width: 20%; /* Adjust width for a reasonable size */
     max-width: 300px; /* Prevent it from getting too large */
     margin-right: 1.5rem; /* Creates spacing between the image and text */
     overflow: hidden; /* Ensures content wraps properly beside the image */
