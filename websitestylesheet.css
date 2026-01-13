@@ -154,7 +154,6 @@ a:hover {color: #D00000;  }
     margin-right: 1.5rem; /* Creates spacing between the image and text */
     overflow: hidden; /* Ensures content wraps properly beside the image */
     border-radius: 10px; /* Optional: Adds soft rounded corners */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Soft shadow for depth */
     overflow: hidden; 
 }
 
